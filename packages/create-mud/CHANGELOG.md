@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2023-03-28)
+
+### Bug Fixes
+
+- **create-mud:** attempt to fix create-mud build/install issues ([#406](https://github.com/dhmi19/mud/issues/406)) ([ea53acc](https://github.com/dhmi19/mud/commit/ea53accaa684c42982bb1cac4ac1fcefd07d1603))
+- **create-mud:** small linting/type fixes for templates ([#425](https://github.com/dhmi19/mud/issues/425)) ([1f2598c](https://github.com/dhmi19/mud/commit/1f2598cff40cd9f5059b553b9291ffd2c61bacdd))
+
+### Features
+
+- **create-mud:** add create-mud package ([#336](https://github.com/dhmi19/mud/issues/336)) ([e85c124](https://github.com/dhmi19/mud/commit/e85c1244bf63ccd0a287849dd33fa685d95ea081))
+- **create-mud:** default to latest mud version ([#432](https://github.com/dhmi19/mud/issues/432)) ([5a38ad6](https://github.com/dhmi19/mud/commit/5a38ad6b96058883518427fe87ad8f85fb266366))
+- **create-mud:** update mud versions ([#407](https://github.com/dhmi19/mud/issues/407)) ([96dfef9](https://github.com/dhmi19/mud/commit/96dfef992f25714963792137043639c0b67c903f))
+- v2 - add store, world and schema-type, cli table code generation ([#422](https://github.com/dhmi19/mud/issues/422)) ([cb731e0](https://github.com/dhmi19/mud/commit/cb731e0937e614bb316e6bc824813799559956c8))
+- v2 event decoding ([#415](https://github.com/dhmi19/mud/issues/415)) ([374ed54](https://github.com/dhmi19/mud/commit/374ed542c3387a4ec2b36ab68ae534419aa58763))
+
+### Reverts
+
+- Revert "chore(release): publish v1.37.0" ([c934f53](https://github.com/dhmi19/mud/commit/c934f5388c1e56f2fe6390fdda30f5b9b1ea1c20))
+
+### BREAKING CHANGES
+
+- This commit removes the deprecated `mud deploy` CLI command. Use `mud deploy-contracts` instead.
+
 # [1.41.0](https://github.com/latticexyz/mud/compare/v1.40.0...v1.41.0) (2023-03-09)
 
 **Note:** Version bump only for package create-mud
