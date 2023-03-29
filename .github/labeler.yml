@@ -64,14 +64,14 @@ labels:
   files:
   - packages/world/.*
 
-- label: "S"
+- label: "small-diff"
   size:
       below: 10
-- label: "M"
+- label: "medium-diff"
   size:
       above: 9
       below: 100
-- label: "L"
+- label: "large-diff"
   size:
       above: 100
 
