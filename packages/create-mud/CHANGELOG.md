@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/dhmi19/mud/compare/create-mud@3.0.0...create-mud@3.0.1) (2023-03-29)
+
+**Note:** Version bump only for package create-mud
+
 # 3.0.0 (2023-03-29)
 
 ## 2.1.1 (2023-03-29)
