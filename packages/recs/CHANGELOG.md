@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/latticexyz/mud/compare/v2.0.1...v2.1.0) (2023-03-29)
+
+### Features
+
+- **cli/recs/std-client:** add ts definitions generator ([#536](https://github.com/latticexyz/mud/issues/536)) ([dd1efa6](https://github.com/latticexyz/mud/commit/dd1efa6a1ebd2b3c62080d1b191633d7b0072916))
+
 ## [2.0.1](https://github.com/latticexyz/mud/compare/v2.0.0...v2.0.1) (2023-03-28)
 
 **Note:** Version bump only for package @latticexyz/recs
