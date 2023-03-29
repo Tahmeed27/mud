@@ -1,6 +1,6 @@
 {
   "name": "@latticexyz/cli",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Command line interface for mud",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -42,7 +42,7 @@
     "@improbable-eng/grpc-web-node-http-transport": "^0.15.0",
     "@latticexyz/schema-type": "^3.0.0",
     "@latticexyz/services": "^3.0.0",
-    "@latticexyz/solecs": "^3.0.0",
+    "@latticexyz/solecs": "^3.0.1",
     "@latticexyz/std-contracts": "^2.2.0",
     "@solidity-parser/parser": "^0.16.0",
     "@typechain/ethers-v5": "^10.1.1",
@@ -70,5 +70,5 @@
     "zod": "^3.21.4",
     "zod-validation-error": "^1.0.1"
   },
-  "gitHead": "a121d0e8ed68f1a17d093cefa1d42158e8d4de8c"
+  "gitHead": "7095650d541a5553e3105025d820f6b52bf3a48d"
 }
