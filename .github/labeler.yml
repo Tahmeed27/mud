@@ -2,98 +2,78 @@ version: 1
 labels:
 - label: '@domain/cli'
   files:
-  - packages/cli/*
-  - packages/cli/**/*
+  - packages/cli/.*
 
 - label: '@domain/create-mud'
   files:
-  - packages/create-mud/*
-  - packages/create-mud/**/*
+  - packages/create-mud/.*
 
 - label: '@domain/ecs-browser'
   files:
-  - packages/ecs-browser/*
-  - packages/ecs-browser/**/*
+  - packages/ecs-browser/.*
 
 - label: '@domain/network'
   files:
-  - packages/network/*
-  - packages/network/**/*
+  - packages/network/.*
 
 - label: '@domain/noise'
   files:
-  - packages/noise/*
-  - packages/noise/**/*
+  - packages/noise/.*
 
 - label: '@domain/phaserx'
   files:
-  - packages/phaserx/*
-  - packages/phaserx/**/*
+  - packages/phaserx/.*
 
 - label: '@domain/react'
   files:
-  - packages/react/*
-  - packages/react/**/*
+  - packages/react/.*
 
 - label: '@domain/recs'
   files:
-  - packages/recs/*
-  - packages/recs/**/*
+  - packages/recs/.*
 
 - label: '@domain/schema-type'
   files:
-  - packages/schema-type/*
-  - packages/schema-type/**/*
+  - packages/schema-type/.*
 
 - label: '@domain/services'
   files:
-  - packages/services/*
-  - packages/services/**/*
+  - packages/services/.*
 
 - label: '@domain/solecs'
   files:
-  - packages/solecs/*
-  - packages/solecs/**/*
+  - packages/solecs/.*
 
 - label: '@domain/std-client'
   files:
-  - packages/std-client/*
-  - packages/std-client/**/*
+  - packages/std-client/.*
 
 - label: '@domain/std-contracts'
   files:
-  - packages/std-contracts/*
-  - packages/std-contracts/**/*
+  - packages/std-contracts/.*
 
 - label: '@domain/store'
   files:
-  - packages/store/*
-  - packages/store/**/*
+  - packages/store/.*
 
 - label: '@domain/utils'
   files:
-  - packages/utils/*
-  - packages/utils/**/*
+  - packages/utils/.*
 
 - label: '@domain/world'
   files:
-  - packages/world/*
-  - packages/world/**/*
+  - packages/world/.*
 
-- label: "xsmall-diff"
-  size-below: 10
-- label: "small-diff"
-  size-above: 9
-  size-below: 100
-- label: "medium-diff"
-  size-above: 99
-  size-below: 500
-- label: "large-diff"
-  size-above: 499
-  size-below: 1000
-- label: "xlarge-diff"
-  size-above: 999
-
+- label: "S"
+  size:
+      below: 10
+- label: "M"
+  size:
+      above: 9
+      below: 100
+- label: "L"
+  size:
+      above: 100
 
 
 
