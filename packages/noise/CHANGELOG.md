@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.1](https://github.com/dhmi19/mud/compare/@latticexyz/noise@2.2.0...@latticexyz/noise@2.2.1) (2023-03-29)
+
+**Note:** Version bump only for package @latticexyz/noise
+
 # 2.2.0 (2023-03-29)
 
 ## 2.1.1 (2023-03-29)

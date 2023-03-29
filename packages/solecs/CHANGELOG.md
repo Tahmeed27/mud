@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.2](https://github.com/latticexyz/mud/compare/@latticexyz/solecs@3.0.1...@latticexyz/solecs@3.0.2) (2023-03-29)
+
+**Note:** Version bump only for package @latticexyz/solecs
+
 ## [3.0.1](https://github.com/latticexyz/mud/compare/@latticexyz/solecs@3.0.0...@latticexyz/solecs@3.0.1) (2023-03-29)
 
 **Note:** Version bump only for package @latticexyz/solecs
