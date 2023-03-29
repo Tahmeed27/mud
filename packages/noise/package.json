@@ -56,5 +56,5 @@
   "peerDependencies": {
     "@flatten-js/interval-tree": "^1.0.19"
   },
-  "gitHead": "a121d0e8ed68f1a17d093cefa1d42158e8d4de8c"
+  "gitHead": "7095650d541a5553e3105025d820f6b52bf3a48d"
 }
