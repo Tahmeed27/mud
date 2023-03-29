@@ -1,0 +1,50 @@
+# Add @domain/package_name label to all packages in packages directory
+'@domain/cli':
+- packages/cli/*
+- packages/cli/**/*
+
+'@domain/create-mud':
+- packages/create-mud/*
+- packages/create-mud/**/*
+
+'@domain/ecs-browser':
+- packages/ecs-browser/*
+- packages/ecs-browser/**/*
+
+'@domain/network':
+- packages/network/*
+- packages/network/**/*
+
+'@domain/noise':
+- packages/noise/*
+- packages/noise/**/*
+
+'@domain/phaserx':
+- packages/phaserx/*
+- packages/phaserx/**/*
+
+'@domain/react':
+- packages/react/*
+- packages/react/**/*
+
+'@domain/recs':
+- packages/recs/*
+- packages/recs/**/*
+
+'@domain/schema-type':
+- packages/schema-type/*
+- packages/schema-type/**/*
+
+'@domain/services':
+- packages/services/*
+- packages/services/**/*
+
+'@domain/solecs':
+- packages/solecs/*
+- packages/solecs/**/*
+
+
+
+
+
+
