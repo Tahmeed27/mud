@@ -1,6 +1,5 @@
 version: 1
 labels:
-# Add @domain/package_name label to all packages in packages directory
   - label: '@domain/cli':
     files:
       - packages/cli/*
@@ -81,7 +80,6 @@ labels:
       - packages/world/*
       - packages/world/**/*
 
-  # Add labels to denote diff size
   - label: "xsmall-diff"
     size-below: 10
   - label: "small-diff"
