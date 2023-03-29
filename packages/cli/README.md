@@ -1,3 +1,3 @@
 # cli
 
-docs coming soon
+Docs coming soon.
