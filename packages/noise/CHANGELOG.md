@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2023-03-29)
+
+## 2.1.1 (2023-03-29)
+
+# 2.1.0 (2023-03-29)
+
+## 2.0.1 (2023-03-28)
+
+# 2.0.0 (2023-03-28)
+
+### Bug Fixes
+
+- do not run prepack multiple times when publishing ([4f6f4c3](https://github.com/dhmi19/mud/commit/4f6f4c35a53c105951b32a071e47a748b2502cda))
+- package entry points, peer dep versions ([#409](https://github.com/dhmi19/mud/issues/409)) ([66a7fd6](https://github.com/dhmi19/mud/commit/66a7fd6f74620ce02c60e3d55701d4740cc65251))
+
+### Features
+
+- matching Perlin noise implementations in Solidity and AssemblyScript ([#145](https://github.com/dhmi19/mud/issues/145)) ([29094c4](https://github.com/dhmi19/mud/commit/29094c4b0c3eeeacd3af690310c7de93a0c45e14))
+- update forge-std, use some new features in cli ([#311](https://github.com/dhmi19/mud/issues/311)) ([43ad118](https://github.com/dhmi19/mud/commit/43ad11837ae280509be92737e8f86d749d4d48d8))
+- v2 event decoding ([#415](https://github.com/dhmi19/mud/issues/415)) ([374ed54](https://github.com/dhmi19/mud/commit/374ed542c3387a4ec2b36ab68ae534419aa58763))
+
+### Reverts
+
+- Revert "chore(release): publish v1.37.0" ([c934f53](https://github.com/dhmi19/mud/commit/c934f5388c1e56f2fe6390fdda30f5b9b1ea1c20))
+
 ## [2.1.1](https://github.com/dhmi19/mud/compare/v2.1.0...v2.1.1) (2023-03-29)
 
 **Note:** Version bump only for package @latticexyz/noise

@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2023-03-29)
+
+## 2.1.1 (2023-03-29)
+
+# 2.1.0 (2023-03-29)
+
+## 2.0.1 (2023-03-28)
+
+# 2.0.0 (2023-03-28)
+
+### Bug Fixes
+
+- package entry points, peer dep versions ([#409](https://github.com/latticexyz/mud/issues/409)) ([66a7fd6](https://github.com/latticexyz/mud/commit/66a7fd6f74620ce02c60e3d55701d4740cc65251))
+
+### Features
+
+- **react:** add react package ([#294](https://github.com/latticexyz/mud/issues/294)) ([f5ee290](https://github.com/latticexyz/mud/commit/f5ee290e776276b2b0dd273705694df04a85f400))
+- **react:** option for useEntityQuery to re-render on value changes ([#460](https://github.com/latticexyz/mud/issues/460)) ([6b90b85](https://github.com/latticexyz/mud/commit/6b90b85febe00ff0a2c9a3c4642d0197b5107e35))
+- v2 event decoding ([#415](https://github.com/latticexyz/mud/issues/415)) ([374ed54](https://github.com/latticexyz/mud/commit/374ed542c3387a4ec2b36ab68ae534419aa58763))
+
+### Reverts
+
+- Revert "chore(release): publish v1.37.0" ([c934f53](https://github.com/latticexyz/mud/commit/c934f5388c1e56f2fe6390fdda30f5b9b1ea1c20))
+
 ## [2.1.1](https://github.com/latticexyz/mud/compare/v2.1.0...v2.1.1) (2023-03-29)
 
 **Note:** Version bump only for package @latticexyz/react
