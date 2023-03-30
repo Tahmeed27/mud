@@ -97,9 +97,9 @@ importers:
     dependencies:
       '@improbable-eng/grpc-web': 0.15.0
       '@improbable-eng/grpc-web-node-http-transport': 0.15.0_fng5pv4qmdetiqq66m6yjkaacu
-      '@latticexyz/schema-type': 1.41.0
+      '@latticexyz/schema-type': link:../schema-type
       '@latticexyz/services': link:../services
-      '@latticexyz/solecs': 1.41.0_bajzj4k5zv7mohpy5skervzhua
+      '@latticexyz/solecs': link:../solecs
       '@latticexyz/std-contracts': link:../std-contracts
       '@solidity-parser/parser': 0.16.0
       '@typechain/ethers-v5': 10.2.0_adzcvilraqwpmvhi27pqolfk7m
@@ -250,9 +250,9 @@ importers:
       '@ethersproject/providers': 5.7.2
       '@improbable-eng/grpc-web': 0.15.0_google-protobuf@3.21.2
       '@latticexyz/recs': link:../recs
-      '@latticexyz/schema-type': 1.41.0
+      '@latticexyz/schema-type': link:../schema-type
       '@latticexyz/services': link:../services
-      '@latticexyz/solecs': 1.41.0
+      '@latticexyz/solecs': link:../solecs
       '@latticexyz/store': link:../store
       '@latticexyz/utils': link:../utils
       '@protobuf-ts/grpcweb-transport': 2.8.3
@@ -449,7 +449,7 @@ importers:
       typescript: ^4.9.5
     devDependencies:
       '@latticexyz/cli': link:../cli
-      '@latticexyz/schema-type': 1.41.0
+      '@latticexyz/schema-type': link:../schema-type
       '@latticexyz/utils': link:../utils
       '@rollup/plugin-node-resolve': 13.3.0_rollup@2.79.1
       '@rollup/plugin-typescript': 11.0.0_bhcmvni67fkldpaxrtldxbogce
@@ -469,6 +469,16 @@ importers:
       typedoc-plugin-markdown: 3.13.6_typedoc@0.23.21
       typescript: 4.9.5
 
+  packages/schema-type:
+    specifiers:
+      ds-test: https://github.com/dapphub/ds-test.git#c9ce3f25bde29fc5eb9901842bf02850dfd2d084
+      forge-std: https://github.com/foundry-rs/forge-std.git#b4f121555729b3afb3c5ffccb62ff4b6e2818fd3
+      rimraf: ^3.0.2
+    devDependencies:
+      ds-test: github.com/dapphub/ds-test/c9ce3f25bde29fc5eb9901842bf02850dfd2d084
+      forge-std: github.com/foundry-rs/forge-std/b4f121555729b3afb3c5ffccb62ff4b6e2818fd3
+      rimraf: 3.0.2
+
   packages/services:
     specifiers:
       long: ^5.2.1
@@ -483,6 +493,42 @@ importers:
     devDependencies:
       rimraf: 3.0.2
       ts-proto: 1.143.0
+
+  packages/solecs:
+    specifiers:
+      '@rari-capital/solmate': https://github.com/Rari-Capital/solmate.git#b6ae78e6ff490f8fec7695c7b65d06e5614f1b65
+      '@solidstate/contracts': ^0.0.52
+      '@typechain/ethers-v5': ^9.0.0
+      '@types/mocha': ^9.1.1
+      ds-test: https://github.com/dapphub/ds-test.git#c9ce3f25bde29fc5eb9901842bf02850dfd2d084
+      forge-std: https://github.com/foundry-rs/forge-std.git#b4f121555729b3afb3c5ffccb62ff4b6e2818fd3
+      hardhat: ^2.10.1
+      memmove: https://github.com/dk1a/memmove.git#ffd71cd77b1708574ef46a667b23ca3a5cc9fa27
+      prettier: ^2.8.4
+      prettier-plugin-solidity: ^1.1.2
+      rimraf: ^3.0.2
+      solhint: ^3.3.7
+      solidity-docgen: ^0.6.0-beta.22
+      ts-node: '10.7'
+      typechain: ^8.1.1
+      typedoc: ^0.23.10
+    devDependencies:
+      '@rari-capital/solmate': github.com/Rari-Capital/solmate/b6ae78e6ff490f8fec7695c7b65d06e5614f1b65
+      '@solidstate/contracts': 0.0.52
+      '@typechain/ethers-v5': 9.0.0_typechain@8.1.1
+      '@types/mocha': 9.1.1
+      ds-test: github.com/dapphub/ds-test/c9ce3f25bde29fc5eb9901842bf02850dfd2d084
+      forge-std: github.com/foundry-rs/forge-std/b4f121555729b3afb3c5ffccb62ff4b6e2818fd3
+      hardhat: 2.13.0_ts-node@10.7.0
+      memmove: github.com/dk1a/memmove/ffd71cd77b1708574ef46a667b23ca3a5cc9fa27
+      prettier: 2.8.4
+      prettier-plugin-solidity: 1.1.2_prettier@2.8.4
+      rimraf: 3.0.2
+      solhint: 3.4.1
+      solidity-docgen: 0.6.0-beta.35_hardhat@2.13.0
+      ts-node: 10.7.0
+      typechain: 8.1.1
+      typedoc: 0.23.21
 
   packages/std-client:
     specifiers:
@@ -518,7 +564,7 @@ importers:
     devDependencies:
       '@latticexyz/network': link:../network
       '@latticexyz/recs': link:../recs
-      '@latticexyz/solecs': 1.41.0
+      '@latticexyz/solecs': link:../solecs
       '@latticexyz/store': link:../store
       '@latticexyz/utils': link:../utils
       '@latticexyz/world': link:../world
@@ -562,7 +608,7 @@ importers:
       typechain: ^8.1.1
       typedoc: ^0.23.10
     devDependencies:
-      '@latticexyz/solecs': 1.41.0_hpjlc5ub6giar4ouszppe6shwq
+      '@latticexyz/solecs': link:../solecs
       '@rari-capital/solmate': github.com/Rari-Capital/solmate/b6ae78e6ff490f8fec7695c7b65d06e5614f1b65
       '@typechain/ethers-v5': 9.0.0_typechain@8.1.1
       ds-test: github.com/dapphub/ds-test/c9ce3f25bde29fc5eb9901842bf02850dfd2d084
@@ -597,7 +643,7 @@ importers:
       typedoc: ^0.23.10
     devDependencies:
       '@latticexyz/cli': link:../cli
-      '@latticexyz/schema-type': 1.41.0
+      '@latticexyz/schema-type': link:../schema-type
       '@typechain/ethers-v5': 9.0.0_typechain@8.1.1
       '@types/ejs': 3.1.2
       '@types/mocha': 9.1.1
@@ -677,7 +723,7 @@ importers:
       typedoc: ^0.23.10
     devDependencies:
       '@latticexyz/cli': link:../cli
-      '@latticexyz/schema-type': 1.41.0
+      '@latticexyz/schema-type': link:../schema-type
       '@latticexyz/store': link:../store
       '@typechain/ethers-v5': 9.0.0_typechain@8.1.1
       '@types/mocha': 9.1.1
@@ -1257,6 +1303,18 @@ packages:
       chalk: 4.1.2
     dev: true
     optional: true
+
+  /@cspotcode/source-map-consumer/0.8.0:
+    resolution: {integrity: sha512-41qniHzTU8yAGbCp04ohlmSrZf8bkf/iJsl3V0dRGsQN/5GFfx+LbCSsCpp2gqrqjTVg/K6O8ycoV35JIwAzAg==}
+    engines: {node: '>= 12'}
+    dev: true
+
+  /@cspotcode/source-map-support/0.7.0:
+    resolution: {integrity: sha512-X4xqRHqN8ACt2aHVe51OxeA2HjbcL4MqFqXkrmQszJ1NOUuUu5u6Vqx/0lZSVNku7velL5FC/s5uEAj1lsBMhA==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@cspotcode/source-map-consumer': 0.8.0
+    dev: true
 
   /@cspotcode/source-map-support/0.8.1:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -2401,46 +2459,6 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
-
-  /@latticexyz/schema-type/1.41.0:
-    resolution: {integrity: sha512-tyE7+HDDGMXn1SUY+VDAJ+xYAA6AYEL6hLobzxJiT1SVSFnahDoD8IvLwSskR7qbl4xM+BdrpnFzWML/26bfMw==}
-
-  /@latticexyz/solecs/1.41.0:
-    resolution: {integrity: sha512-70ti6lU5HcAWMerAn/I//XQA4ZSxyES4wVLa3bxNvi9Oah3bPRy7QsgKLjesjRnxSIRyi1e0AbU0Hca3GzHulg==}
-    peerDependencies:
-      '@rari-capital/solmate': https://github.com/Rari-Capital/solmate.git#b6ae78e6ff490f8fec7695c7b65d06e5614f1b65
-      '@solidstate/contracts': ^0.0.52
-      ds-test: https://github.com/dapphub/ds-test.git#c9ce3f25bde29fc5eb9901842bf02850dfd2d084
-      forge-std: https://github.com/foundry-rs/forge-std.git#b4f121555729b3afb3c5ffccb62ff4b6e2818fd3
-      memmove: https://github.com/dk1a/memmove.git#ffd71cd77b1708574ef46a667b23ca3a5cc9fa27
-    dev: true
-
-  /@latticexyz/solecs/1.41.0_bajzj4k5zv7mohpy5skervzhua:
-    resolution: {integrity: sha512-70ti6lU5HcAWMerAn/I//XQA4ZSxyES4wVLa3bxNvi9Oah3bPRy7QsgKLjesjRnxSIRyi1e0AbU0Hca3GzHulg==}
-    peerDependencies:
-      '@rari-capital/solmate': https://github.com/Rari-Capital/solmate.git#b6ae78e6ff490f8fec7695c7b65d06e5614f1b65
-      '@solidstate/contracts': ^0.0.52
-      ds-test: https://github.com/dapphub/ds-test.git#c9ce3f25bde29fc5eb9901842bf02850dfd2d084
-      forge-std: https://github.com/foundry-rs/forge-std.git#b4f121555729b3afb3c5ffccb62ff4b6e2818fd3
-      memmove: https://github.com/dk1a/memmove.git#ffd71cd77b1708574ef46a667b23ca3a5cc9fa27
-    dependencies:
-      ds-test: github.com/dapphub/ds-test/c9ce3f25bde29fc5eb9901842bf02850dfd2d084
-      forge-std: github.com/foundry-rs/forge-std/b4f121555729b3afb3c5ffccb62ff4b6e2818fd3
-    dev: false
-
-  /@latticexyz/solecs/1.41.0_hpjlc5ub6giar4ouszppe6shwq:
-    resolution: {integrity: sha512-70ti6lU5HcAWMerAn/I//XQA4ZSxyES4wVLa3bxNvi9Oah3bPRy7QsgKLjesjRnxSIRyi1e0AbU0Hca3GzHulg==}
-    peerDependencies:
-      '@rari-capital/solmate': https://github.com/Rari-Capital/solmate.git#b6ae78e6ff490f8fec7695c7b65d06e5614f1b65
-      '@solidstate/contracts': ^0.0.52
-      ds-test: https://github.com/dapphub/ds-test.git#c9ce3f25bde29fc5eb9901842bf02850dfd2d084
-      forge-std: https://github.com/foundry-rs/forge-std.git#b4f121555729b3afb3c5ffccb62ff4b6e2818fd3
-      memmove: https://github.com/dk1a/memmove.git#ffd71cd77b1708574ef46a667b23ca3a5cc9fa27
-    dependencies:
-      '@rari-capital/solmate': github.com/Rari-Capital/solmate/b6ae78e6ff490f8fec7695c7b65d06e5614f1b65
-      ds-test: github.com/dapphub/ds-test/c9ce3f25bde29fc5eb9901842bf02850dfd2d084
-      forge-std: github.com/foundry-rs/forge-std/b4f121555729b3afb3c5ffccb62ff4b6e2818fd3
-    dev: true
 
   /@lerna/add/4.0.0:
     resolution: {integrity: sha512-cpmAH1iS3k8JBxNvnMqrGTTjbY/ZAiKa1ChJzFevMYY3eeqbvhsBKnBcxjRXtdrJ6bd3dCQM+ZtK+0i682Fhng==}
@@ -4836,6 +4854,10 @@ packages:
     resolution: {integrity: sha512-ESipEcHyRHg4Np4SqBCfcXwyxxna1DgFVz69bgpLV8vzl/NP1DtcKsJ4dJZXWQhY/Z4J2LeKBiOkOVZn9ct33Q==}
     dependencies:
       antlr4ts: 0.5.0-alpha.4
+
+  /@solidstate/contracts/0.0.52:
+    resolution: {integrity: sha512-xSBn5oLnfYtgNYrsRq/COlWHt0NxK26PFQ3FvI2DDMAFpZKFsffGLzUl8umezj2gVKpN7EZ+EVLdPKjqx6eUOw==}
+    dev: true
 
   /@swc/helpers/0.4.14:
     resolution: {integrity: sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==}
@@ -9578,6 +9600,76 @@ packages:
       solc: 0.7.3_debug@4.3.4
       source-map-support: 0.5.21
       stacktrace-parser: 0.1.10
+      tsort: 0.0.1
+      undici: 5.21.0
+      uuid: 8.3.2
+      ws: 7.5.9
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+    dev: true
+
+  /hardhat/2.13.0_ts-node@10.7.0:
+    resolution: {integrity: sha512-ZlzBOLML1QGlm6JWyVAG8lVTEAoOaVm1in/RU2zoGAnYEoD1Rp4T+ZMvrLNhHaaeS9hfjJ1gJUBfiDr4cx+htQ==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    peerDependencies:
+      ts-node: '*'
+      typescript: '*'
+    peerDependenciesMeta:
+      ts-node:
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@ethersproject/abi': 5.7.0
+      '@metamask/eth-sig-util': 4.0.1
+      '@nomicfoundation/ethereumjs-block': 4.2.2
+      '@nomicfoundation/ethereumjs-blockchain': 6.2.2
+      '@nomicfoundation/ethereumjs-common': 3.1.2
+      '@nomicfoundation/ethereumjs-evm': 1.3.2
+      '@nomicfoundation/ethereumjs-rlp': 4.0.3
+      '@nomicfoundation/ethereumjs-statemanager': 1.0.5
+      '@nomicfoundation/ethereumjs-trie': 5.0.5
+      '@nomicfoundation/ethereumjs-tx': 4.1.2
+      '@nomicfoundation/ethereumjs-util': 8.0.6
+      '@nomicfoundation/ethereumjs-vm': 6.4.2
+      '@nomicfoundation/solidity-analyzer': 0.1.1
+      '@sentry/node': 5.30.0
+      '@types/bn.js': 5.1.0
+      '@types/lru-cache': 5.1.1
+      abort-controller: 3.0.0
+      adm-zip: 0.4.16
+      aggregate-error: 3.1.0
+      ansi-escapes: 4.3.2
+      chalk: 2.4.2
+      chokidar: 3.5.3
+      ci-info: 2.0.0
+      debug: 4.3.4
+      enquirer: 2.3.6
+      env-paths: 2.2.1
+      ethereum-cryptography: 1.2.0
+      ethereumjs-abi: 0.6.8
+      find-up: 2.1.0
+      fp-ts: 1.19.3
+      fs-extra: 7.0.1
+      glob: 7.2.0
+      immutable: 4.3.0
+      io-ts: 1.10.4
+      keccak: 3.0.2
+      lodash: 4.17.21
+      mnemonist: 0.38.5
+      mocha: 10.2.0
+      p-map: 4.0.0
+      qs: 6.11.0
+      raw-body: 2.5.2
+      resolve: 1.17.0
+      semver: 6.3.0
+      solc: 0.7.3_debug@4.3.4
+      source-map-support: 0.5.21
+      stacktrace-parser: 0.1.10
+      ts-node: 10.7.0
       tsort: 0.0.1
       undici: 5.21.0
       uuid: 8.3.2
@@ -15124,7 +15216,7 @@ packages:
       hardhat: ^2.8.0
     dependencies:
       handlebars: 4.7.7
-      hardhat: 2.13.0
+      hardhat: 2.13.0_ts-node@10.7.0
       solidity-ast: 0.4.46
     dev: true
 
@@ -16086,6 +16178,35 @@ packages:
       semver: 7.3.8
       typescript: 4.9.5
       yargs-parser: 21.1.1
+    dev: true
+
+  /ts-node/10.7.0:
+    resolution: {integrity: sha512-TbIGS4xgJoX2i3do417KSaep1uRAW/Lu+WAL2doDHC0D6ummjirVOXU5/7aiZotbQ5p1Zp9tP7U6cYhA0O7M8A==}
+    hasBin: true
+    peerDependencies:
+      '@swc/core': '>=1.2.50'
+      '@swc/wasm': '>=1.2.50'
+      '@types/node': '*'
+      typescript: '>=2.7'
+    peerDependenciesMeta:
+      '@swc/core':
+        optional: true
+      '@swc/wasm':
+        optional: true
+    dependencies:
+      '@cspotcode/source-map-support': 0.7.0
+      '@tsconfig/node10': 1.0.9
+      '@tsconfig/node12': 1.0.11
+      '@tsconfig/node14': 1.0.3
+      '@tsconfig/node16': 1.0.3
+      acorn: 8.8.2
+      acorn-walk: 8.2.0
+      arg: 4.1.3
+      create-require: 1.1.1
+      diff: 4.0.2
+      make-error: 1.3.6
+      v8-compile-cache-lib: 3.0.1
+      yn: 3.1.1
     dev: true
 
   /ts-node/10.9.1:
@@ -17346,6 +17467,12 @@ packages:
     resolution: {tarball: https://codeload.github.com/dapphub/ds-test/tar.gz/c9ce3f25bde29fc5eb9901842bf02850dfd2d084}
     name: ds-test
     version: 1.0.0
+
+  github.com/dk1a/memmove/ffd71cd77b1708574ef46a667b23ca3a5cc9fa27:
+    resolution: {tarball: https://codeload.github.com/dk1a/memmove/tar.gz/ffd71cd77b1708574ef46a667b23ca3a5cc9fa27}
+    name: memmove
+    version: 0.1.0
+    dev: true
 
   github.com/foundry-rs/forge-std/b4f121555729b3afb3c5ffccb62ff4b6e2818fd3:
     resolution: {tarball: https://codeload.github.com/foundry-rs/forge-std/tar.gz/b4f121555729b3afb3c5ffccb62ff4b6e2818fd3}

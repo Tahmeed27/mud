@@ -2,11 +2,34 @@
   "name": "mud",
   "version": "0.0.0",
   "description": "Mud is the fabric of autonomous worlds",
+  "engines": {
+    "pnpm": ">=7"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/latticexyz/mud.git"
   },
   "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/utils",
+      "packages/schema-type",
+      "packages/solecs",
+      "packages/store",
+      "packages/world",
+      "packages/cli",
+      "packages/recs",
+      "packages/react",
+      "packages/phaserx",
+      "packages/network",
+      "packages/std-contracts",
+      "packages/std-client",
+      "packages/ecs-browser",
+      "packages/services",
+      "packages/noise",
+      "packages/create-mud"
+    ]
+  },
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
     "@commitlint/config-conventional": "^16.2.4",
@@ -38,26 +61,25 @@
     }
   },
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
-    "prepare": "husky install && (forge --version || pnpm foundryup) && pnpm -r prepare",
+    "prepare": "husky install && (forge --version || foundryup) && pnpm recursive run prepare",
     "commit": "cz",
     "prettier:check": "prettier --check 'packages/**/*.ts'",
     "prettier": "prettier --write 'packages/**/*.ts'",
     "lint": "eslint . --ext .ts",
-    "release": "pnpm && lerna publish --no-private --force-publish && pnpm retype:updateversion",
+    "release": "pnpm install && lerna publish --no-private --force-publish && pnpm retype:updateversion",
     "release:manual": "node scripts/workspaceRun.mjs release",
-    "release:yalc": "(pnpm entry:dist && pnpm lerna exec npx yalc push); pnpm entry:src",
+    "release:yalc": "(pnpm entry:dist && lerna exec npx yalc push); pnpm entry:src",
     "foundryup": "curl -L https://foundry.paradigm.xyz | bash && bash ~/.foundry/bin/foundryup",
-    "link:packages": "pnpm lerna run link",
-    "docs": "pnpm docs:prepare && pnpm retype build",
-    "docs:prepare": "pnpm lerna run docs && pnpm retype:updateversion",
-    "docs:dev": "pnpm retype watch .",
-    "retype:updateversion": "sed \"s/label: .*/label: $(pnpm list --pattern @latticexyz/solecs | grep -e @latticexyz | sed \"s/.*@//\")/\" retype.yml > retype.yml.tmp && mv retype.yml.tmp retype.yml",
-    "test": "pnpm workspaces run test",
-    "entry:dist": "pnpm lerna run prepack",
-    "entry:src": "pnpm lerna run postpack",
-    "gas-report": "pnpm workspace @latticexyz/store run gas-report && pnpm workspace @latticexyz/world run gas-report",
-    "tablegen": "pnpm workspace @latticexyz/store run tablegen && pnpm workspace @latticexyz/world run tablegen"
+    "link:packages": "lerna run link",
+    "docs": "pnpm docs:prepare && retype build",
+    "docs:prepare": "lerna run docs && pnpm retype:updateversion",
+    "docs:dev": "retype watch .",
+    "retype:updateversion": "sed \"s/label: .*/label: $(pnpm list --filter @latticexyz/solecs | grep -e @latticexyz | sed \"s/.*@//\")/\" retype.yml > retype.yml.tmp && mv retype.yml.tmp retype.yml",
+    "test": "pnpm recursive run test",
+    "entry:dist": "lerna run prepack",
+    "entry:src": "lerna run postpack",
+    "gas-report": "workspace @latticexyz/store run gas-report && pnpm recursive run --filter @latticexyz/world run gas-report",
+    "tablegen": "pnpm recursive run --filter @latticexyz/store run tablegen && pnpm recursive run --filter @latticexyz/world run tablegen"
   },
   "lint-staged": {
     "*.ts": "eslint --cache --fix",

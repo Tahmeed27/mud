@@ -15,6 +15,7 @@
     "directory": "packages/cli"
   },
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "prepare": "pnpm build && chmod u+x git-install.sh",
     "codegen": "ts-node --esm --files ./scripts/codegen.ts",
     "lint": "eslint . --ext .ts",
