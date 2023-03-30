@@ -1,0 +1,81 @@
+version: 1
+labels:
+- label: '@domain/cli'
+  files:
+  - packages/cli/.*
+
+- label: '@domain/create-mud'
+  files:
+  - packages/create-mud/.*
+
+- label: '@domain/ecs-browser'
+  files:
+  - packages/ecs-browser/.*
+
+- label: '@domain/network'
+  files:
+  - packages/network/.*
+
+- label: '@domain/noise'
+  files:
+  - packages/noise/.*
+
+- label: '@domain/phaserx'
+  files:
+  - packages/phaserx/.*
+
+- label: '@domain/react'
+  files:
+  - packages/react/.*
+
+- label: '@domain/recs'
+  files:
+  - packages/recs/.*
+
+- label: '@domain/schema-type'
+  files:
+  - packages/schema-type/.*
+
+- label: '@domain/services'
+  files:
+  - packages/services/.*
+
+- label: '@domain/solecs'
+  files:
+  - packages/solecs/.*
+
+- label: '@domain/std-client'
+  files:
+  - packages/std-client/.*
+
+- label: '@domain/std-contracts'
+  files:
+  - packages/std-contracts/.*
+
+- label: '@domain/store'
+  files:
+  - packages/store/.*
+
+- label: '@domain/utils'
+  files:
+  - packages/utils/.*
+
+- label: '@domain/world'
+  files:
+  - packages/world/.*
+
+- label: "small-diff"
+  size:
+      below: 10
+- label: "medium-diff"
+  size:
+      above: 9
+      below: 100
+- label: "large-diff"
+  size:
+      above: 100
+
+
+
+
+
