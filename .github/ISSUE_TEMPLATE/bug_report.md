@@ -1,10 +1,9 @@
 ---
 name: Bug report
 about: Report any bugs you notice
-title: ''
-labels: ''
-assignees: ''
-
+title: ""
+labels: ""
+assignees: ""
 ---
 
 ## Issue Checklist
@@ -32,9 +31,11 @@ Please provide detailed steps to reproduce the current behavior that you describ
 3. ...
 
 ## Pastebin
+
 ```
 If relevant, please provide a pastebin of your stack trace or error message.
 ```
+
 ## System Information
 
 Please provide the following information about your environment:
