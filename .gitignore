@@ -5,3 +5,4 @@ node_modules
 .docs
 lerna-debug.log
 .retype
+id_ed25519_docker
