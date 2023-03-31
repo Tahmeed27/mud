@@ -4,6 +4,10 @@
   "version": "1.41.0",
   "description": "World framework",
   "types": "./types/ethers-contracts/",
+  "exports": {
+    "./mud.config.mjs": "./dist/mud.config.mjs",
+    "./*": "./*"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/latticexyz/mud.git",
@@ -41,6 +45,7 @@
     "solhint": "^3.3.7",
     "solidity-docgen": "^0.6.0-beta.22",
     "ts-node": "^10.9.1",
+    "tsup": "^6.7.0",
     "typechain": "^8.1.1",
     "typedoc": "^0.23.10"
   },

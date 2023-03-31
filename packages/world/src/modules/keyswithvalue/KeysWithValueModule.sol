@@ -6,13 +6,11 @@ import { StoreSwitch } from "@latticexyz/store/src/StoreSwitch.sol";
 import { IWorld } from "../../interfaces/IWorld.sol";
 import { IModule } from "../../interfaces/IModule.sol";
 
-import { ROOT_NAMESPACE, CORE_MODULE_NAME } from "../../constants.sol";
 import { WorldContext } from "../../WorldContext.sol";
 import { ResourceSelector } from "../../ResourceSelector.sol";
 
 import { KeysWithValueHook } from "./KeysWithValueHook.sol";
 import { KeysWithValue } from "./tables/KeysWithValue.sol";
-import { MODULE_NAMESPACE } from "./constants.sol";
 import { getTargetTableSelector } from "./getTargetTableSelector.sol";
 
 /**
@@ -49,6 +47,15 @@ contract KeysWithValueModule is IModule, WorldContext {
       targetTableSelector.getFile(),
       KeysWithValue.getSchema(),
       KeysWithValue.getKeySchema()
+    );
+
+    // Register metadata for the target table
+    (string memory tableName, string[] memory fieldNames) = KeysWithValue.getMetadata();
+    IWorld(_world()).setMetadata(
+      targetTableSelector.getNamespace(),
+      targetTableSelector.getFile(),
+      tableName,
+      fieldNames
     );
 
     // Grant the hook access to the target table

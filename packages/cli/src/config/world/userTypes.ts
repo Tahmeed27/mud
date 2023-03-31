@@ -5,6 +5,14 @@ export type SystemUserConfig =
   | {
       /** The full resource selector consists of namespace and fileSelector */
       fileSelector?: string;
+      /**
+       * Register function selectors for the system in the World.
+       * Defaults to true.
+       * Note:
+       * - For root systems all World function selectors will correspond to the system's function selectors.
+       * - For non-root systems, the World function selectors will be <namespace>_<system>_<function>.
+       */
+      registerFunctionSelectors?: boolean;
     } & (
       | {
           /** If openAccess is true, any address can call the system */
@@ -53,8 +61,8 @@ export interface WorldUserConfig {
    * Script must be placed in the forge scripts directory (see foundry.toml) and have a ".s.sol" extension.
    */
   postDeployScript?: string;
-  /** Directory to write the deployment info to (Default ".") */
-  deploymentInfoDirectory?: string;
+  /** Directory to write the deployment info to (Default "./deploys") */
+  deploysDirectory?: string;
   /** Directory to output system and world interfaces of `worldgen` (Default "world") */
   worldgenDirectory?: string;
   /** Path for world package imports. Default is "@latticexyz/world/src/" */
