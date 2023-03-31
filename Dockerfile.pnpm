@@ -16,6 +16,8 @@ RUN mkdir -p -m 0700 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
 
 COPY id_ed25519_docker /root/.ssh/id_ed25519
 
+RUN chmod 600 /root/.ssh/id_ed25519
+
 WORKDIR /root/app
 COPY . .
 CMD ["time", "pnpm", "install", "--ignore-scripts"]
